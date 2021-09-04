@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="list">
+            <div>Sales</div>
+            <div>Manage stocks</div>
+        </div>
+        
+    </div>
+    <div id="toggle" onclick="toggleSideBar()">=</div>
+
+    <div class="container">
+
+    </div>
+
+    <!-- Stripe as payment gateway -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const sidebar = document.querySelector('#sidebar');
+        const toggleBtn = document.querySelector('#toggle');
+
+        let toggle = false;
+        function toggleSideBar() {
+            sidebar.style.left = (!toggle) ? '-250px' : '0px';
+            toggleBtn.style.left = (toggle) ? '250px' : '0px';
+            toggle = !toggle;
+
+        }
+    </script>
+</body>
+</html>
